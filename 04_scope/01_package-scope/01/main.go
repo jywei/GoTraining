@@ -2,13 +2,20 @@ package main
 
 import "fmt"
 
-var x = 42
+var x = 42 // whole package
+
+// var x int = 42
 
 func main() {
 	fmt.Println(x)
-	foo()
+	y := 17
+	foo(y)
+	fmt.Println(y) // sequence matters
 }
 
-func foo() {
+func foo(y int) {
 	fmt.Println(x)
+	fmt.Println(y)
 }
+
+// fixed!
