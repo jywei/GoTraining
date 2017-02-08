@@ -7,7 +7,7 @@ func main() {
 	for {
 		i++
 		if (i % 2) == 0 {
-			continue
+			continue // meaning skip, continue from the top
 		}
 		fmt.Println(i)
 		if i >= 50 {
