@@ -7,10 +7,10 @@ func main() {
 	a := 43
 
 	fmt.Println(a)  // 43
-	fmt.Println(&a) // 0x20818a220
+	fmt.Println(&a) // address
 
 	var b = &a
-	fmt.Println(b)  // 0x20818a220
+	fmt.Println(b)  // address
 	fmt.Println(*b) // 43
 
 	// b is an int pointer;

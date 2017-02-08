@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func zero(z int) {
-	fmt.Printf("%p\n", &z) // address in func zero
+	fmt.Printf("%p\n", &z) // address in func zero, %p == base 16 notation, with leading 0x
 	fmt.Println(&z)        // address in func zero
 	z = 0
 }

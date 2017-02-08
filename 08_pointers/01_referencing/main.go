@@ -9,6 +9,7 @@ func main() {
 	fmt.Println(a)
 	fmt.Println(&a)
 
+	// var b *int = &a
 	var b = &a
 
 	fmt.Println(b)
