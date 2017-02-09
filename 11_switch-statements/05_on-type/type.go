@@ -14,7 +14,7 @@ type contact struct {
 // SwitchOnType works with interfaces
 // we'll learn more about interfaces later
 func SwitchOnType(x interface{}) {
-	switch x.(type) {
+	switch x.(type) { // this is an assert; asserting, "x is of this type"
 	case int:
 		fmt.Println("int")
 	case string:

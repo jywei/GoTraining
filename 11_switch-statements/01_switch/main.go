@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	switch "Mhi" {
+	switch "Medicci" {
 	case "Daniel":
 		fmt.Println("Wassup Daniel")
 	case "Medicci":

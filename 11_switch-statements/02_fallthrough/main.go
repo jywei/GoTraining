@@ -10,7 +10,7 @@ func main() {
 		fmt.Println("Wassup Jenny")
 	case "Marcus":
 		fmt.Println("Wassup Marcus")
-		fallthrough
+		fallthrough // go for the next case
 	case "Medicci":
 		fmt.Println("Wassup Medicci")
 		fallthrough
