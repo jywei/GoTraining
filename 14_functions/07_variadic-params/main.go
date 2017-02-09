@@ -7,7 +7,7 @@ func main() {
 	fmt.Println(n)
 }
 
-func average(sf ...float64) float64 {
+func average(sf ...float64) float64 { // one or more arguments, pass in as more as float64 as you wish
 	fmt.Println(sf)
 	fmt.Printf("%T \n", sf)
 	var total float64

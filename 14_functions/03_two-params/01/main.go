@@ -6,6 +6,6 @@ func main() {
 	greet("Jane", "Doe")
 }
 
-func greet(fname string, lname string) {
+func greet(fname, lname string) {
 	fmt.Println(fname, lname)
 }

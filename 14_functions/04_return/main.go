@@ -7,5 +7,5 @@ func main() {
 }
 
 func greet(fname, lname string) string {
-	return fmt.Sprint(fname, lname)
+	return fmt.Sprint(fname, lname) // string print
 }
