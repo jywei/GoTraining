@@ -4,11 +4,13 @@ import "fmt"
 
 func main() {
 	for i := 250; i <= 340; i++ {
-		fmt.Println(i, " - ", string(i), " - ", []byte(string(i)))
+		fmt.Println(i, " - ", string(i), " - ", []byte(string(i))) // turn i to string, then turn string(i) to byte, then put it into the array
 	}
+	// foo := 'a'
 	foo := "a"
 	fmt.Println(foo)
 	fmt.Printf("%T \n", foo)
+	// fmt.Printf("%T \n", rune(foo))
 }
 
 /*
