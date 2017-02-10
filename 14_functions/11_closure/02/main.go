@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-var x int
+var x int // var x = 0
 
 func increment() int {
 	x++
