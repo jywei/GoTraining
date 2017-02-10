@@ -8,7 +8,7 @@ func main() {
 	fmt.Println(n)
 }
 
-func average(sf []float64) float64 {
+func average(sf []float64) float64 { // take in the whole list the same time
 	total := 0.0
 	for _, v := range sf {
 		total += v
