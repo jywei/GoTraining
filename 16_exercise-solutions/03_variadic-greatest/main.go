@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func max(numbers ...int) int {
+	fmt.Printf("%T \n", numbers)
 	var largest int
 	for _, v := range numbers {
 		if v > largest {
