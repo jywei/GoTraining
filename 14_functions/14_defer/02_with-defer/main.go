@@ -11,6 +11,6 @@ func world() {
 }
 
 func main() {
-	defer world()
+	defer world() // it runs before main function
 	hello()
 }
