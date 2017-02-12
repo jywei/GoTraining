@@ -14,4 +14,4 @@ func main() {
 	})
 }
 
-// callback: passing a func as an argument
+// callback: passing a func as an argument, func(n int) { fmt.Println(n) }
