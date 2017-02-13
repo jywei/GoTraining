@@ -7,7 +7,7 @@ func main() {
 	mySlice := []int{1, 2, 3, 4, 5}
 	myOtherSlice := []int{6, 7, 8, 9}
 
-	mySlice = append(mySlice, myOtherSlice...)
+	mySlice = append(mySlice, myOtherSlice...) // to put in all elements in myOtherSlice
 
 	fmt.Println(mySlice)
 }

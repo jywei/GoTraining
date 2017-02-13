@@ -6,6 +6,9 @@ import (
 
 func main() {
 	var records [][]string
+	// records := make([][]string, 0)
+	// records is a slice storing slices
+
 	// student 1
 	student1 := make([]string, 4)
 	student1[0] = "Foster"

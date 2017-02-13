@@ -10,8 +10,10 @@ func main() {
 
 	greeting[0] = "Good morning!"
 	greeting[1] = "Bonjour!"
-	greeting[2] = "buenos dias!"
-	greeting[3] = "suprabadham"
+	greeting[2] = "Buenos dias!"
+	greeting[3] = "Suprabadham" // this one is out of the length, so if you want to add more items in the constrained length, we need to use append()
+
+	// greeting = append(greeting, "Suprabadham")
 
 	fmt.Println(greeting[2])
 }

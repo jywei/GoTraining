@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 
 	customerNumber := make([]int, 3)
-	// 3 is length & capacity
+	// 3 is both length & capacity
 	// // length - number of elements referred to by the slice
 	// // capacity - number of elements in the underlying array
 	customerNumber[0] = 7
@@ -23,7 +23,7 @@ func main() {
 
 	greeting[0] = "Good morning!"
 	greeting[1] = "Bonjour!"
-	greeting[2] = "dias!"
+	greeting[2] = "Buenos dias!"
 
 	fmt.Println(greeting[2])
 }

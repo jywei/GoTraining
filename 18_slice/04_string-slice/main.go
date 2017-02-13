@@ -7,12 +7,12 @@ func main() {
 	greeting := []string{
 		"Good morning!",
 		"Bonjour!",
-		"dias!",
+		"Buenos dias!",
 		"Bongiorno!",
 		"Ohayo!",
 		"Selamat pagi!",
 		"Gutten morgen!",
-	}
+	} // ending comma with the string
 
 	for i, currentEntry := range greeting {
 		fmt.Println(i, currentEntry)

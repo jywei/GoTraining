@@ -10,7 +10,7 @@ func main() {
 
 	greeting[0] = "Good morning!"
 	greeting[1] = "Bonjour!"
-	greeting[2] = "buenos dias!"
+	greeting[2] = "Buenos dias!"
 	greeting = append(greeting, "Suprabadham")
 
 	fmt.Println(greeting[3])
