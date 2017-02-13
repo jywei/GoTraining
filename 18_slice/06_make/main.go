@@ -5,9 +5,11 @@ import "fmt"
 func main() {
 
 	customerNumber := make([]int, 3)
+	// a := new([100]int)[0:50] == make([]int, 50, 100)
+
 	// 3 is both length & capacity
-	// // length - number of elements referred to by the slice
-	// // capacity - number of elements in the underlying array
+	// length - number of elements referred to by the slice
+	// capacity - number of elements in the underlying array
 	customerNumber[0] = 7
 	customerNumber[1] = 10
 	customerNumber[2] = 15
