@@ -4,6 +4,8 @@ import "fmt"
 
 func main() {
 	var x [256]byte
+	// uint8 == byte
+	// int32 == rune
 
 	fmt.Println(len(x))
 	fmt.Println(x[42])
