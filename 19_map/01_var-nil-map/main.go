@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 
-	var myGreeting map[string]string // the first string is the key type, and the second string is the value type
+	var myGreeting map[string]string // never do this!!!
 	fmt.Println(myGreeting)
 	fmt.Println(myGreeting == nil)
 }
