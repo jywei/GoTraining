@@ -12,10 +12,10 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	bs, err := ioutil.ReadAll(res.Body)
-	res.Body.Close()
+	bs, err := ioutil.ReadAll(res.Body) // bs == byte slice, res.Body == response body
+	res.Body.Close()                    // after using a Get, we should close it
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("%s", bs)
+	fmt.Printf("%s", bs) // print it as a string
 }

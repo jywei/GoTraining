@@ -31,6 +31,6 @@ func main() {
 
 func hashBucket(word string, buckets int) int {
 	letter := int(word[0])
-	bucket := letter % buckets
+	bucket := letter % buckets // devided by 12
 	return bucket
 }
