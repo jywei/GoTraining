@@ -13,5 +13,5 @@ func main() {
 
 	for key, val := range myGreeting {
 		fmt.Println(key, " - ", val)
-	}
+	} // if slice, index - value
 }

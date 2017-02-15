@@ -25,7 +25,7 @@ func main() {
 		fmt.Println("exists: ", exists)
 	}
 
-	a, b := myGreeting[3]
+	a, ok := myGreeting[3]
 	fmt.Println(a)
-	fmt.Println(b)
+	fmt.Println(ok) // comma ok idiom
 }

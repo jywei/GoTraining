@@ -16,3 +16,5 @@ func main() {
  */
 // and you will get this:
 // panic: assignment to entry in nil map
+
+// A nil map is equivalent to an empty map except that no elements may be added
