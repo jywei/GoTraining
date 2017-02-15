@@ -25,5 +25,7 @@ func main() {
 		fmt.Println("exists: ", exists)
 	}
 
-	fmt.Println(myGreeting)
+	a, b := myGreeting[3]
+	fmt.Println(a)
+	fmt.Println(b)
 }
