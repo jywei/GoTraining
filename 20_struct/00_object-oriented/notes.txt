@@ -3,13 +3,13 @@ Go is Object Oriented
 (1) Encapsulation
 state ("fields")
 behavior ("methods")
-exported / un-exported
+exported / un-exported (public / private)
 
 (2) Reusability
 inheritence ("embedded types")
 
 (3) Polymorphism
-interfaces
+interfaces -- one function can take many different types, if it implements that interface
 
 (4) Overriding
 "promotion"

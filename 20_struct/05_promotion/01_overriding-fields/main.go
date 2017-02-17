@@ -11,8 +11,8 @@ type person struct {
 }
 
 type doubleZero struct {
-	person
-	First         string
+	person               // the type is taken from person struct, so the inner type is promoted to the outter type
+	First         string // therefore, the creating variable next will get the properpty from both 'person' and 'doublezero'
 	LicenseToKill bool
 }
 
@@ -38,6 +38,6 @@ func main() {
 	}
 
 	// fields and methods of the inner-type are promoted to the outer-type
-	fmt.Println(p1.First, p1.person.First)
+	fmt.Println(p1.First, p1.person.First, p1.Last) // Last got promoted
 	fmt.Println(p2.First, p2.person.First)
 }
