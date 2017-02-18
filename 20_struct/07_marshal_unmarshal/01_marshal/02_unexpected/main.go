@@ -6,7 +6,7 @@ import (
 )
 
 type person struct {
-	first string
+	first string // lowercase == not exported
 	last  string
 	age   int
 }

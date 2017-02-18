@@ -15,8 +15,8 @@ type person struct {
 
 func main() {
 	var p1 person
-	rdr := strings.NewReader(`{"First":"James", "Last":"Bond", "Age":20}`)
-	json.NewDecoder(rdr).Decode(&p1)
+	rdr := strings.NewReader(`{"First": "James", "Last": "Bond", "Age": 35}`) // NewReader will take a string and return a pointer
+	json.NewDecoder(rdr).Decode(&p1)                                          // NewDecoder wants to take a reader, and return a pointer to Decoder
 
 	fmt.Println(p1.First)
 	fmt.Println(p1.Last)
