@@ -20,7 +20,7 @@ func main() {
 		person: person{
 			First: "James",
 			Last:  "Bond",
-			Age:   20,
+			Age:   35, // the inner type will be promoted to the outter type
 		},
 		LicenseToKill: true,
 	}
@@ -29,7 +29,7 @@ func main() {
 		person: person{
 			First: "Miss",
 			Last:  "MoneyPenny",
-			Age:   19,
+			Age:   26,
 		},
 		LicenseToKill: false,
 	}

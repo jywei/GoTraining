@@ -18,7 +18,7 @@ func (p person) Greeting() {
 	fmt.Println("I'm just a regular person.")
 }
 
-func (dz doubleZero) Greeting() {
+func (dz doubleZero) Greeting() { // the outter type will overwrite inner type
 	fmt.Println("Miss Moneypenny, so good to see you.")
 }
 
@@ -31,11 +31,11 @@ func main() {
 	p2 := doubleZero{
 		person: person{
 			Name: "James Bond",
-			Age:  23,
+			Age:  35,
 		},
 		LicenseToKill: true,
 	}
-	p1.Greeting()
-	p2.Greeting()
-	p2.person.Greeting()
+	p1.Greeting()        // "I'm just a regular person."
+	p2.Greeting()        // "Miss Moneypenny, so good to see you."
+	p2.person.Greeting() // "I'm just a regular person."
 }

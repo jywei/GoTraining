@@ -23,7 +23,7 @@ func main() {
 			Last:  "Bond",
 			Age:   20,
 		},
-		First:         "Double Zero Seven",
+		First:         "Double Zero Seven", // the outter type First will ocerwrite inner type First
 		LicenseToKill: true,
 	}
 
