@@ -12,6 +12,9 @@ func (z square) area() float64 {
 
 type shape interface {
 	area() float64 // so basically interface is a struct for functions and assgined return/input values
+	// on the other word, interface is a type that declaire behaviors
+	// however, interface type has no method defined attached to it
+	// instead, methods are customized by users (with other user defined types)
 }
 
 func info(z shape) {
