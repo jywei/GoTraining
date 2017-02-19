@@ -17,11 +17,11 @@ type shape interface {
 	area() float64
 }
 
-func (c circle) area() float64 {
+func (c circle) area() float64 { // no need to write if-else in area() function
 	return math.Pi * c.radius * c.radius
 }
 
-func (s square) area() float64 {
+func (s square) area() float64 { // a type implementing an interface
 	return s.side * s.side
 }
 

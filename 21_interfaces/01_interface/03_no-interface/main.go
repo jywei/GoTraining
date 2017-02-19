@@ -13,7 +13,7 @@ type circle struct {
 	radius float64
 }
 
-type shape interface {
+type shape interface { // interface allows things to connect together, like lego blocks
 	area() float64
 }
 
