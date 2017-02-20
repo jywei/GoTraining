@@ -11,11 +11,12 @@ type square struct {
 
 type circle struct {
 	radius float64
-}
+} // a concrete type == what it is and what you can do with it
 
 type shape interface { // interface allows things to connect together, like lego blocks
 	area() float64
-}
+} // an abstract type == no expression or internal value
+// square and circle satisfied the shape interface
 
 func (s square) area() float64 {
 	return s.side * s.side

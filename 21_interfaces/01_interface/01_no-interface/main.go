@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-type square struct {
+type square struct { // a concrete type
 	side float64
 }
 
