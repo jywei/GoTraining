@@ -36,7 +36,7 @@ func main() {
 	sanger := boat{}
 	nautique := boat{}
 	malibu := boat{}
-	rides := []vehicles{prius, tacoma, bmw528, boeing747, boeing757, boeing767, sanger, nautique, malibu}
+	rides := []vehicles{prius, tacoma, bmw528, boeing747, boeing757, boeing767, sanger, nautique, malibu} // implement the interface
 
 	for key, value := range rides {
 		fmt.Println(key, " - ", value)
