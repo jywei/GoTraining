@@ -23,5 +23,5 @@ func info(s shape) {
 
 func main() {
 	c := circle{5}
-	info(c)
+	info(c) // info only take a pointer, &c
 }

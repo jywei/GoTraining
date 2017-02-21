@@ -13,7 +13,7 @@ type shape interface {
 	area() float64
 }
 
-func (c circle) area() float64 {
+func (c circle) area() float64 { // value receiver
 	return math.Pi * c.radius * c.radius
 }
 
@@ -23,5 +23,5 @@ func info(s shape) {
 
 func main() {
 	c := circle{5}
-	info(&c)
+	info(&c) // value receiver can take both value or pointer
 }

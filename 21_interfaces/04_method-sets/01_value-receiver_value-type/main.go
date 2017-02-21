@@ -13,7 +13,7 @@ type shape interface {
 	area() float64
 }
 
-func (c circle) area() float64 {
+func (c circle) area() float64 { // untyped constant can be flexible
 	return math.Pi * c.radius * c.radius
 }
 
