@@ -16,7 +16,7 @@ type cat struct {
 	annoying bool
 }
 
-func specs(a interface{}) { // for empty interface you can throw anything in it
+func specs(a interface{}) { // for empty interface you can throw anything in it (all types)
 	fmt.Println(a)
 }
 
