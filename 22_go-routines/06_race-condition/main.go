@@ -21,7 +21,7 @@ func main() {
 func incrementor(s string) {
 	rand.Seed(time.Now().UnixNano())
 	for i := 0; i < 20; i++ {
-		x := counter
+		x := counter // here is the race condition, two parallel program tries to get a global variable at the same time
 		x++
 		time.Sleep(time.Duration(rand.Intn(3)) * time.Millisecond)
 		counter = x
