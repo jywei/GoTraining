@@ -5,7 +5,7 @@ import (
 	"sync"
 )
 
-var wg sync.WaitGroup
+var wg sync.WaitGroup // wait in order to avoid race condition
 
 func main() {
 	wg.Add(2)
