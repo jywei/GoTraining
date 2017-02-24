@@ -7,7 +7,7 @@ import (
 
 func main() {
 	// channel is like map, so we use make for 'maps', 'slices', and 'channels'
-	c := make(chan int) // the unbuffered channel we will communicate with int
+	c := make(chan int) // the unbuffered channel we will communicate with int, and it will only take one
 	// Unbuffered channel is the channel don't explicitly assign size ie. cha := make(chan int, 10) => cha is a buffered channel
 	// two independently running go-routines
 	go func() {
