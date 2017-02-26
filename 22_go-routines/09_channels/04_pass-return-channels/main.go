@@ -10,7 +10,9 @@ func main() {
 	}
 }
 
-func incrementor() chan int {
+// dead lock is either no one to pass, or no one to receive
+
+func incrementor() chan int { // it will return a int channel
 	out := make(chan int)
 	go func() {
 		for i := 0; i < 10; i++ {
@@ -21,7 +23,7 @@ func incrementor() chan int {
 	return out
 }
 
-func puller(c chan int) chan int {
+func puller(c chan int) chan int { // take a channel and return another channel
 	out := make(chan int)
 	go func() {
 		var sum int
