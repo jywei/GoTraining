@@ -7,6 +7,10 @@ func main() {
 	for n := range sq(sq(gen(2, 3))) {
 		fmt.Println(n) // 16 then 81
 	}
+
+	for n := range sq(gen(2, 3)) {
+		fmt.Println(n) // 4 then 9
+	}
 }
 
 func gen(nums ...int) chan int {

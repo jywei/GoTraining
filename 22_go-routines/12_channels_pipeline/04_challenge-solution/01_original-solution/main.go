@@ -29,7 +29,7 @@ func gen() <-chan int {
 }
 
 func factorial(in <-chan int) <-chan int {
-	out := make(chan int)
+	out := make(chan int) // "out" is a golang convention
 	go func() {
 		for n := range in {
 			out <- fact(n)
