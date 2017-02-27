@@ -8,11 +8,11 @@ func main() {
 	out := sq(c)
 
 	// Consume the output.
-	fmt.Println(<-out) // 4
-	fmt.Println(<-out) // 9
+	fmt.Println(<-out) // 4, the first value
+	fmt.Println(<-out) // 9, the second value
 }
 
-func gen(nums ...int) chan int {
+func gen(nums ...int) <-chan int { // variadic parameter, which takes unlimited ints
 	out := make(chan int)
 	go func() {
 		for _, n := range nums {
@@ -23,7 +23,7 @@ func gen(nums ...int) chan int {
 	return out
 }
 
-func sq(in chan int) chan int {
+func sq(in <-chan int) <-chan int { // receive only
 	out := make(chan int)
 	go func() {
 		for n := range in {
