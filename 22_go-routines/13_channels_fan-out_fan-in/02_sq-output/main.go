@@ -8,12 +8,12 @@ import (
 func main() {
 	in := gen(2, 3)
 
-	// FAN OUT
+	// FAN OUT => multiple funcs reading from that channel until it's closed
 	// Distribute the sq work across two goroutines that both read from in.
 	c1 := sq(in)
 	c2 := sq(in)
 
-	// FAN IN
+	// FAN IN => multiple channels writing to the same channel
 	// Consume the merged output from multiple channels.
 	for n := range merge(c1, c2) {
 		fmt.Println(n) // 4 then 9, or 9 then 4
