@@ -8,7 +8,7 @@ import (
 func main() {
 	in := gen(2, 3)
 
-	// FAN OUT => multiple funcs reading from that channel until it's closed
+	// FAN OUT => multiple funcs pulling out from the same channel until it's closed
 	// Distribute the sq work across two goroutines that both read from in.
 	c1 := sq(in)
 	c2 := sq(in)
@@ -20,24 +20,24 @@ func main() {
 	}
 }
 
-func gen(nums ...int) chan int {
-	fmt.Printf("Type of nums %T\n", nums)
+func gen(nums ...int) chan int { // gen takes variadic nums, and output a bidirectional channel
+	fmt.Printf("Type of nums %T\n", nums) // here you will get a slice of int
 
 	out := make(chan int)
 	go func() {
-		for _, n := range nums {
+		for _, n := range nums { // range over a slice of map
 			out <- n
 		}
 		close(out)
 	}()
-	return out
+	return out // return the channel
 }
 
-func sq(in chan int) chan int {
+func sq(in chan int) chan int { // sq will take one channel and return another channel
 	out := make(chan int)
 	go func() {
-		for n := range in {
-			out <- n * n
+		for n := range in { // this just simply ranges over a channel
+			out <- n * n // a channel is a sequential serial pipeline (one at a time)
 		}
 		close(out)
 	}()
@@ -45,20 +45,20 @@ func sq(in chan int) chan int {
 }
 
 func merge(cs ...chan int) chan int {
-	fmt.Printf("Type of cs: %T\n", cs)
+	fmt.Printf("Type of cs: %T\n", cs) // here you will get a slice of channels
 
 	out := make(chan int)
 	var wg sync.WaitGroup
 	wg.Add(len(cs))
 
 	for _, c := range cs {
-		go func(ch chan int) {
+		go func(ch chan int) { // anomynous func
 			for n := range ch {
 				out <- n
 			}
 			wg.Done()
-		}(c)
-	}
+		}(c) // here is to call the function and also a given parameter
+	} // if one don't take in c, there will have two go func accessing the same c
 
 	go func() {
 		wg.Wait()
@@ -87,3 +87,5 @@ CHALLENGE #1
 When know HOW to do fan out / fan in, but do we know WHY?
 Why would we want to do fan out / fan in?
 */
+
+// when we have a lot of values to deal with, we can have multiple workers to process them
