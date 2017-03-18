@@ -15,8 +15,8 @@ func main() {
 func gen() <-chan int {
 	out := make(chan int)
 	go func() {
-		for i := 0; i < 10; i++ {
-			for j := 3; j < 13; j++ {
+		for i := 0; i < 10; i++ { // 10 times
+			for j := 3; j < 13; j++ { // 3 ~ 12, 10 nums
 				out <- j
 			}
 		}
@@ -48,8 +48,8 @@ func fact(n int) int {
 CHALLENGE #1:
 -- Change the code above to execute 1,000 factorial computations concurrently and in parallel.
 -- Use the "fan out / fan in" pattern
+
 CHALLENGE #2:
 WATCH MY SOLUTION BEFORE DOING THIS CHALLENGE #2
 -- While running the factorial computations, try to find how much of your resources are being used.
--- Post the percentage of your resources being used to this discussion: https://goo.gl/BxKnOL
 */

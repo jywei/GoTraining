@@ -9,8 +9,8 @@ var workerID int
 var publisherID int
 
 func main() {
-	input := make(chan string)
-	go workerProcess(input)
+	input := make(chan string) // one channel
+	go workerProcess(input)    // one channel goes in different functions
 	go workerProcess(input)
 	go workerProcess(input)
 	go publisher(input)
@@ -29,7 +29,7 @@ func publisher(out chan string) {
 		dataID++
 		fmt.Printf("publisher %d is pushing data\n", thisID)
 		data := fmt.Sprintf("Data from publisher %d. Data %d", thisID, dataID)
-		out <- data
+		out <- data // put things onto the channel
 	}
 }
 
@@ -42,3 +42,13 @@ func workerProcess(in <-chan string) {
 		fmt.Printf("%d input is: %s\n", thisID, input)
 	}
 }
+
+/*
+CHALLENGE #1
+Is this fan out?
+CHALLENGE #2
+Is this fan in?
+
+We don't have many channels here, so this is not fanning in
+
+*/

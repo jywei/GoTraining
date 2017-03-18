@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+
 	in := gen()
 
 	// FAN OUT
@@ -16,7 +17,7 @@ func main() {
 	// FAN IN
 	// multiplex multiple channels onto a single channel
 	// merge the channels from c0 through c9 onto a single channel
-	for n := range merge(xc...) {
+	for n := range merge(xc...) { // put all values individually from the slice of channel xc into the merge function
 		fmt.Println(n)
 	}
 }
@@ -35,7 +36,7 @@ func gen() <-chan int {
 }
 
 func fanOut(in <-chan int, n int) []<-chan int {
-	xc := make([]<-chan int, n)
+	xc := make([]<-chan int, n) // n for both length and capacity, so if we append from here, it starts from n + 1
 	for i := 0; i < n; i++ {
 		xc = append(xc, factorial(in))
 	}
