@@ -10,6 +10,6 @@ func main() {
 		//		fmt.Println("err happened", err)
 		//		log.Println("err happened", err)
 		//		log.Fatalln(err)
-		panic(err)
+		panic(err) // exit status 2, panic and recover == try and catch
 	}
 }
