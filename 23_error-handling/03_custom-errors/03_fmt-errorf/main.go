@@ -16,6 +16,7 @@ func main() {
 func Sqrt(f float64) (float64, error) {
 	if f < 0 {
 		return 0, fmt.Errorf("norgate math again: square root of negative number: %v", f)
+		// format printing and converting to string
 	}
 	// implementation
 	return 42, nil

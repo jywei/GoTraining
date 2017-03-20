@@ -7,13 +7,13 @@ import (
 
 // NorgateMathError is a custom error type
 type NorgateMathError struct {
-	lat, long string
+	lat, long string // latitude and longitude
 	err       error
 }
 
-func (n *NorgateMathError) Error() string {
+func (n *NorgateMathError) Error() string { // this func turns the NorgateMathError struct into an error type interface
 	return fmt.Sprintf("a norgate math error occured: %v %v %v", n.lat, n.long, n.err)
-}
+} // if one uses a pointer as an input(receiver), then the output(value) can only be a pointer
 
 func main() {
 	_, err := Sqrt(-10.23)
@@ -27,6 +27,7 @@ func Sqrt(f float64) (float64, error) {
 	if f < 0 {
 		nme := fmt.Errorf("norgate math redux: square root of negative number: %v", f)
 		return 0, &NorgateMathError{"50.2289 N", "99.4656 W", nme}
+		// return 0, nme
 	}
 	// implementation
 	return 42, nil

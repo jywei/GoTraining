@@ -10,7 +10,7 @@ import (
 var ErrNorgateMath = errors.New("norgate math: square root of negative number")
 
 func main() {
-	fmt.Printf("%T\n", ErrNorgateMath)
+	fmt.Printf("%T\n", ErrNorgateMath) // *errors.errorString
 	_, err := Sqrt(-10)
 	if err != nil {
 		log.Fatalln(err)
