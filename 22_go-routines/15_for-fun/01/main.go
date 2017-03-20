@@ -33,6 +33,6 @@ func main() {
 		fmt.Println(v)
 	}
 
-	// good housekeeping
+	// housekeeping
 	close(ch2)
 }
