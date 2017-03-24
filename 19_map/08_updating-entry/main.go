@@ -13,6 +13,8 @@ func main() {
 	fmt.Println(myGreeting)
 	myGreeting["Harleen"] = " Gidday"
 	fmt.Println(myGreeting)
+	myGreeting["Harleen"] = " Whatup!!"
+	fmt.Println(myGreeting)
 }
 
 // under a slice is an array
